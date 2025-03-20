@@ -23,9 +23,6 @@ class MainActivity : AppCompatActivity() {
         Horoscope("aquarius", R.string.horoscope_name_aquarius, R.string.horoscope_date_aquarius, R.drawable.aquarius_icon),
         Horoscope("pisces", R.string.horoscope_name_pisces, R.string.horoscope_date_pisces, R.drawable.pisces_icon)
     )
-    )
-
-    )
 
 
 
