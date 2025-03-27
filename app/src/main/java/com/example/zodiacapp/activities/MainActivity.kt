@@ -2,6 +2,7 @@ package com.example.zodiacapp.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     var horoscopeList = HoroscopeProvider.getAll()
 
     lateinit var recyclerView: RecyclerView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +42,11 @@ class MainActivity : AppCompatActivity() {
         })
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_activity_main,menu)
+        return true
     }
 }
 
