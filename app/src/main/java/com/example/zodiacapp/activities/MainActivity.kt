@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerView = findViewById(R.id.recyclerView)
+    }
+
+     override fun onResume() {
+        super.onResume()
 
         adapter = HoroscopeAdapter(horoscopeList, { position ->
             val horoscope = horoscopeList[position]
@@ -47,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         })
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
